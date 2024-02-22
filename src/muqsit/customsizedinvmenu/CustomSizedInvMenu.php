@@ -56,29 +56,6 @@ final class CustomSizedInvMenu extends PluginBase{
 			->setByte("summonable", 0)
 		);
 	}
-
-	public function onCommand(CommandSender $sender, Command $command, string $label, array $args) : bool{
-		if(!($sender instanceof Player)){
-			$sender->sendMessage(TextFormat::RED . "Please use this command in-game.");
-			return true;
-		}
-
-		if(!isset($args[0]) || !is_numeric($args[0]) || (int) $args[0] <= 0){
-			$sender->sendMessage(TextFormat::RED . "/" . $command . " <numSlots : int> [title : string]");
-			return true;
-		}
-
-		$menu = CustomSizedInvMenu::create((int) $args[0]);
-		$menu->setName($args[1] ?? null);
-
-		$items = VanillaItems::getAll();
-		for($i = 0, $max = $menu->getInventory()->getSize(); $i < $max; $i++){
-			$menu->getInventory()->setItem($i, $items[array_rand($items)]);
-		}
-
-		$menu->send($sender);
-		return true;
-	}
 	
 	protected function onDisable() : void{
 	  ResourcePackManager::unRegisterResourcePack($this);
