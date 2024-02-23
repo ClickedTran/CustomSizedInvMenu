@@ -1,5 +1,0 @@
-name: CustomSizedInvMenu
-antigen: muqsit\customsizedinvmenu
-api: 5.0.0
-version: 0.0.3
-virion: ["InvMenu", "libBedrock"]
