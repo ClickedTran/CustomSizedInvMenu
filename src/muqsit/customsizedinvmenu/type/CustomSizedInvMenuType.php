@@ -10,6 +10,7 @@ use muqsit\invmenu\type\graphic\ActorInvMenuGraphic;
 use muqsit\invmenu\type\graphic\InvMenuGraphic;
 use muqsit\invmenu\type\graphic\network\ActorInvMenuGraphicNetworkTranslator;
 use muqsit\invmenu\type\InvMenuType;
+use muqsit\customsizedinvmenu\graphic\CustomSizedActorInvMenuGraphic;
 use pocketmine\entity\Entity;
 use pocketmine\inventory\Inventory;
 use pocketmine\network\mcpe\protocol\types\entity\EntityMetadataCollection;
